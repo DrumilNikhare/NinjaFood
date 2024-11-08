@@ -1,0 +1,398 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PT Sans", sans-serif;
+}
+
+body {
+    background-color: #fae9e9; /* Choose your preferred color */
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.featured-video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+    /* background: rgba(0, 0, 0, 0.5); Optional for a dark overlay */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d1451a;
+}
+
+.h1{
+    color: orange;
+    
+}
+
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* Logo color */
+}
+
+.navbar nav a {
+    margin: 0 1rem;
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    padding-bottom: 5px; /* Space for the line animation */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+/* Hover effect on nav links */
+.navbar nav a:hover {
+    color: #ff6f3c; /* Change text color on hover */
+}
+
+/* Line animation on hover */
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff6f3c; /* Line color matches hover color */
+    transition: width 0.3s ease; /* Smooth line animation */
+}
+
+.navbar nav a:hover::after {
+    width: 100%; /* Expand line on hover */
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+}
+
+.auth-buttons .sign-up,
+.auth-buttons .log-in {
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Sign Up Button */
+.sign-up {
+    background-color: #ff6f3c;
+    color: white;
+}
+
+/* Log In Button */
+.log-in {
+    background-color: white;
+    color: #ff6f3c;
+    border: 1px solid #ff6f3c;
+}
+
+/* Hover effect for auth buttons */
+.sign-up:hover {
+    background-color: #e05b2c; /* Darker shade for hover effect */
+}
+
+.log-in:hover {
+    background-color: #ff6f3c; /* Change background on hover */
+    color: white;
+}
+
+
+/* .find-location {
+    padding: 0.5rem 1.2rem;
+    background-color: #ff6f3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+/*}
+
+.find-location:hover {
+    background-color: #ff5722; /* Darken color on hover 
+    transform: scale(1.05);  Slightly enlarge button on hover 
+} */
+
+
+/* Featured Section */
+.featured {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+/* Featured Section */
+.featured {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+/* Background Video Styling */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    /* Place it behind the content */
+}
+
+.featured-image {
+    position: relative;
+    z-index: 1;
+    /* Ensure content is above the video */
+}
+
+.featured h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.featured button {
+    padding: 0.75rem 1.5rem;
+    background-color: #ff6f3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+/* Featured Section */
+.featured {
+    position: relative;
+    background-image: url('noodles_background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 2rem;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.featured h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.featured button {
+    padding: 0.75rem 1.5rem;
+    background-color: #ff6f3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Categories */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+/* Categories */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.category {
+    text-align: center;
+    color: #666;
+    cursor: pointer; /* Pointer cursor to indicate interactivity */
+    transition: transform 0.3s ease; /* Smooth transition for movement */
+}
+
+.category img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Smooth transition for image scaling */
+}
+
+.category:hover img {
+    transform: scale(1.1); /* Slightly enlarge image on hover */
+}
+
+.category span {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.category:hover span {
+    color: #333; /* Darken text color on hover */
+}
+
+/* Hover effect for movement */
+.category:hover {
+    transform: translateY(-10px); /* Move up by 10px on hover */
+}
+
+/* New Dishes Section */
+.new-dishes {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.new-dishes h2 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: rgb(82, 79, 79);
+}
+
+/* Dishes Container */
+.dishes {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Dish */
+.dish {
+    max-width: 300px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start from below */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Dish Hover Effect */
+.dish:hover {
+    transform: translateY(-10px); /* Move up when hovered */
+    opacity: 1; /* Make the dish visible on hover */
+}
+
+/* Dish Image */
+.dish img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Smooth transition for image scaling */
+}
+
+/* Image Hover Effect */
+.dish:hover img {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+/* Dish Title */
+.dish h3 {
+    font-size: 1.25rem;
+    margin-top: 0.75rem;
+    color: orange;
+}
+
+/* Dish Description */
+.dish p {
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Animation for fading in dishes */
+.dishes .dish {
+    animation: fadeInUp 0.6s ease-in-out forwards; /* Apply fade-in and move-up animation */
+}
+
+.dishes .dish:nth-child(1) {
+    animation-delay: 0.2s; /* Delay for staggered effect */
+}
+
+.dishes .dish:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.dishes .dish:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Keyframes for fading and moving dishes up */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End in place */
+    }
+}
